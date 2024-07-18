@@ -5,6 +5,7 @@ import { Pie, PieChart, Cell, Legend, Bar, BarChart, Tooltip, LabelList, YAxis, 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 import { getStudents } from '../services/apiService';
+import Head from 'next/head';
 
 interface ChartData {
   label: string;
@@ -105,6 +106,9 @@ function Home() {
 
   return (
     <div className='grid gap-4'>
+      <Head>
+        <title>JEAS - Estudantes</title>
+      </Head>
       <div className="flex md:flex-row flex-col gap-4">
         <Card className='flex-1'>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">

@@ -3,6 +3,7 @@ import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, LabelList } from '
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChartConfig, ChartContainer, ChartTooltipContent } from '@/components/ui/chart';
 import { getServidores } from '../services/apiService';
+import Head from 'next/head';
 
 interface ChartData {
   label: string;
@@ -73,6 +74,9 @@ function ServidorPage() {
 
   return (
     <div className='grid gap-4'>
+      <Head>
+        <title>JEAS - Servidores</title>
+      </Head>
       <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle>
